@@ -24,6 +24,10 @@ public class AwsDemoApplication {
 	public List<Person> getPersons() {
 		return repository.findAll();
 	}
+	@GetMapping
+	public String hi(){
+		return "AWS app working";
+	}
 	public static void main(String[] args) {
 		SpringApplication.run(AwsDemoApplication.class, args);
 	}
